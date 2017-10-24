@@ -25,7 +25,7 @@ public class DatasUtil {
             "http://www.feizl.com/upload2007/2014_06/1406272351394618.png",
             "http://v1.qzone.cc/avatar/201308/30/22/56/5220b2828a477072.jpg%21200x200.jpg",
             "http://v1.qzone.cc/avatar/201308/22/10/36/521579394f4bb419.jpg!200x200.jpg",
-          };
+    };
 
     public static List<User> users = new ArrayList<User>();
     public static List<PhotoInfo> PHOTOS = new ArrayList<>();
@@ -205,7 +205,7 @@ public class DatasUtil {
 
     public static List<CommentItem> createCommentItemList() {
         List<CommentItem> items = new ArrayList<CommentItem>();
-        int size = getRandomNum(10);
+//        int size = getRandomNum(10);
 //        if (size > 0) {
 //            for (int i = 0; i < size; i++) {
 //                items.add(createComment());
