@@ -1,0 +1,41 @@
+-injars 'C:\Users\chen\Desktop\jt\CircleDemo-master\CircleDemo\app\build\intermediates\transforms\jarMerging\debug\jars\1\1f\combined.jar'
+-outjars 'C:\Users\chen\Desktop\jt\CircleDemo-master\CircleDemo\app\build\intermediates\multi-dex\debug\componentClasses.jar'
+
+-libraryjars 'C:\Users\chen\AppData\Local\Android\Sdk\build-tools\23.0.1\lib\shrinkedAndroid.jar'
+
+-forceprocessing
+-dontoptimize
+-dontobfuscate
+-dontusemixedcaseclassnames
+-dontpreverify
+-dontnote **,com.android.tools.fd.**,android.support.multidex.MultiDexExtractor
+-dontwarn **
+-printconfiguration 'C:\Users\chen\Desktop\jt\CircleDemo-master\CircleDemo\app\build\intermediates\multi-dex\debug\components.flags'
+
+
+-keep class com.yiw.circledemo.MyApplication {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+
+-keep class com.yiw.circledemo.activity.MainActivity {
+    <init>();
+}
+
+-keep class com.yiw.circledemo.activity.ImagePagerActivity {
+    <init>();
+}
+
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+
+-keep public class * extends java.lang.annotation.Annotation {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.android.tools.fd.** {
+    <fields>;
+    <methods>;
+}

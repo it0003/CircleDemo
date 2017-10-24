@@ -1,0 +1,16 @@
+-keep class com.yiw.circledemo.MyApplication {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+-keep class com.yiw.circledemo.activity.MainActivity { <init>(); }
+-keep class com.yiw.circledemo.activity.ImagePagerActivity { <init>(); }
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+-keep public class * extends java.lang.annotation.Annotation {
+    *;
+}
+-keep class com.android.tools.fd.** {
+    *;
+}
+-dontnote com.android.tools.fd.**,android.support.multidex.MultiDexExtractor
