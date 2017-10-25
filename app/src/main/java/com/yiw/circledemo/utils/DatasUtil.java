@@ -41,13 +41,13 @@ public class DatasUtil {
      * 评论id自增长
      */
     private static int commentId = 0;
-    public static final User curUser = new User("1", "我", HEADIMG[4]);
+    public static final User curUser = new User("0", "我", HEADIMG[0]);
 
     static {
-        User user1 = new User("1", "张", HEADIMG[0]);
-        User user2 = new User("2", "李", HEADIMG[1]);
-        User user3 = new User("3", "王", HEADIMG[2]);
-        User user4 = new User("4", "这个名字是不是很长哈哈！因为我是用来测试换行的", HEADIMG[3]);
+        User user1 = new User("1", "张", HEADIMG[1]);
+        User user2 = new User("2", "李", HEADIMG[2]);
+        User user3 = new User("3", "王", HEADIMG[3]);
+        User user4 = new User("4", "这个名字是不是很长哈哈！因为我是用来测试换行的", HEADIMG[4]);
 
         users.add(curUser);
         users.add(user1);
@@ -205,19 +205,19 @@ public class DatasUtil {
 
     public static List<CommentItem> createCommentItemList() {
         List<CommentItem> items = new ArrayList<CommentItem>();
-//        int size = getRandomNum(10);
-//        if (size > 0) {
-//            for (int i = 0; i < size; i++) {
-//                items.add(createComment());
-//            }
-//        }
+        int size = getRandomNum(10);
+        if (size > 0) {
+            for (int i = 0; i < size; i++) {
+                items.add(createComment());
+            }
+        }
         return items;
     }
 
     public static CommentItem createComment() {
         CommentItem item = new CommentItem();
         item.setId(String.valueOf(commentId++));
-        item.setContent("哈哈");
+        item.setContent("你好");
         User user = getUser();
         item.setUser(user);
         if (getRandomNum(10) % 2 == 0) {
