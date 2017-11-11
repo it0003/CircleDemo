@@ -16,8 +16,6 @@ import com.yiw.circledemo.activity.ImagePagerActivity;
 import com.yiw.circledemo.activity.MainActivity;
 import com.yiw.circledemo.adapter.viewholder.CircleViewHolder;
 import com.yiw.circledemo.adapter.viewholder.ImageViewHolder;
-import com.yiw.circledemo.adapter.viewholder.URLViewHolder;
-import com.yiw.circledemo.adapter.viewholder.VideoViewHolder;
 import com.yiw.circledemo.bean.ActionItem;
 import com.yiw.circledemo.bean.CircleItem;
 import com.yiw.circledemo.bean.CommentConfig;
@@ -77,13 +75,8 @@ public class CircleAdapter extends BaseRecycleViewAdapter {
             viewHolder = new HeaderViewHolder(headView);
         } else {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_circle_item, parent, false);
-
-            if (viewType == CircleViewHolder.TYPE_URL) {
-                viewHolder = new URLViewHolder(view);
-            } else if (viewType == CircleViewHolder.TYPE_IMAGE) {
+            if (viewType == CircleViewHolder.TYPE_IMAGE) {
                 viewHolder = new ImageViewHolder(view);
-            } else if (viewType == CircleViewHolder.TYPE_VIDEO) {
-                viewHolder = new VideoViewHolder(view);
             }
         }
         return viewHolder;

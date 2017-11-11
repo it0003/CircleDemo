@@ -21,9 +21,7 @@ import com.yiw.circledemo.widgets.videolist.widget.TextureVideoView;
  */
 public abstract class CircleViewHolder extends RecyclerView.ViewHolder implements VideoLoadMvpView {
 
-    public final static int TYPE_URL = 1;
     public final static int TYPE_IMAGE = 2;
-    public final static int TYPE_VIDEO = 3;
 
     public int viewType;
 
