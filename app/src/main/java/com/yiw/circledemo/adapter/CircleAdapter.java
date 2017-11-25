@@ -26,7 +26,6 @@ import com.yiw.circledemo.mvp.presenter.CirclePresenter;
 import com.yiw.circledemo.utils.DatasUtil;
 import com.yiw.circledemo.utils.GlideCircleTransform;
 import com.yiw.circledemo.utils.UrlUtils;
-import com.yiw.circledemo.widgets.CircleVideoView;
 import com.yiw.circledemo.widgets.CommentListView;
 import com.yiw.circledemo.widgets.ExpandTextView;
 import com.yiw.circledemo.widgets.MultiImageView;
@@ -156,7 +155,7 @@ public class CircleAdapter extends BaseRecycleViewAdapter {
                         public void onItemClick(int commentPosition) {
                             CommentItem commentItem = commentsDatas.get(commentPosition);
                             if (DatasUtil.curUser.getId().equals(commentItem.getUser().getId())) {//复制或者删除自己的评论
-
+                                //复制--删除的弹窗
                                 CommentDialog dialog = new CommentDialog(context, presenter, commentItem, circlePosition);
                                 dialog.show();
                             } else {//回复别人的评论
@@ -267,6 +266,7 @@ public class CircleAdapter extends BaseRecycleViewAdapter {
                     if (presenter != null) {
                         if ("赞".equals(actionitem.mTitle.toString())) {
                             presenter.addFavort(mCirclePosition);
+                            Toast.makeText(context, "给" + position + "点赞啊", Toast.LENGTH_SHORT).show();
                         } else {//取消点赞
                             presenter.deleteFavort(mCirclePosition, mFavorId);
                         }
@@ -274,12 +274,14 @@ public class CircleAdapter extends BaseRecycleViewAdapter {
                     break;
                 case 1://发布评论
                     if (presenter != null) {
+                        Toast.makeText(context, "给" + position + "评论啊", Toast.LENGTH_SHORT).show();
                         CommentConfig config = new CommentConfig();
                         config.circlePosition = mCirclePosition;
                         config.commentType = CommentConfig.Type.PUBLIC;
                         presenter.showEditTextBody(config);
                     }
                     break;
+
                 default:
                     break;
             }
