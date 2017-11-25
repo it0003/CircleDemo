@@ -197,7 +197,6 @@ public class MainActivity extends YWActivity implements CircleContract.View, Eas
                 updateEditTextBodyVisible(View.GONE, null);
             }
         });
-
         setViewTreeObserver();
     }
 
@@ -210,7 +209,7 @@ public class MainActivity extends YWActivity implements CircleContract.View, Eas
         titleBar = (TitleBar) findViewById(R.id.main_title_bar);
         titleBar.setTitle("用户评论");
         titleBar.setTitleColor(getResources().getColor(R.color.white));
-        titleBar.setBackgroundColor(getResources().getColor(R.color.title_bg));
+        titleBar.setBackgroundColor(getResources().getColor(R.color.title_bg_a));
     }
 
 
