@@ -51,11 +51,11 @@
             </LinearLayout>
 
             <com.yiw.circledemo.widgets.ExpandTextView
-                android:id="@+id/contentTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
-                app:showLines="4" />
+            android:id="@+id/contentTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            app:showLines="4" />
 
             <!-- 不同的地方 -->
             <ViewStub
